@@ -4,8 +4,11 @@
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
+    "dotenv": "^9.0.2",
+    "mysql": "^2.18.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-native-my-sql-connection": "^1.0.4",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.2"
   },
