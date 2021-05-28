@@ -11,7 +11,7 @@ import { AUTH } from '../../constants/actionTypes';
 import useStyles from './styles';
 import Input from './Input';
 
-const initialState = { firstName: '', lastName: '', email: '', password: '', confirmPassword: '' };
+const initialState = { firstName: '', lastName: '', email: '', genderIdentity: '', genderPreference: '', score: '', buffCategory: '',  password: '', confirmPassword: '' };
 
 const SignUp = () => {
   const [form, setForm] = useState(initialState);
@@ -72,6 +72,9 @@ const SignUp = () => {
             </>
             )}
             <Input name="email" label="Email Address" handleChange={handleChange} type="email" />
+            <Input name="genderIdentity" label="Gender Identity" handleChange={handleChange} type="genderIdentity" />
+            <Input name="genderPreference" label="Gender Preference" handleChange={handleChange} type="genderPreference" />
+            <Input name="buffCategory" label="Buff Category" handleChange={handleChange} type="buffCategory" />
             <Input name="password" label="Password" handleChange={handleChange} type={showPassword ? 'text' : 'password'} handleShowPassword={handleShowPassword} />
             { isSignup && <Input name="confirmPassword" label="Repeat Password" handleChange={handleChange} type="password" /> }
           </Grid>
