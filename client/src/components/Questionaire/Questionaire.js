@@ -1,8 +1,10 @@
+import { lightGreen } from '@material-ui/core/colors';
 import React from 'react';
-import { Button } from '@material-ui/core/';
+// import { Button } from '@material-ui/core/';
 
 
-const Questionaire = ({handleAnswer, data:{ question, correct_answer, incorrect_answers}
+
+const Questionaire = ({ handleAnswer, data: { question, correct_answer, incorrect_answers },
 }) => {
   const shuffledAnswers = [correct_answer, ... incorrect_answers].sort(() => Math.random() - 0.5);
   return (
@@ -10,8 +12,12 @@ const Questionaire = ({handleAnswer, data:{ question, correct_answer, incorrect_
     <h2 dangerouslySetInnerHTML = {{__html:question}}/>
         <div>
           {shuffledAnswers.map((answer)=> (
-            <Button onClick = {handleAnswer(answer)}> {answer} 
-            </Button>
+            <button 
+            onClick={() => handleAnswer
+            (answer)} > 
+            {answer}
+            </button>
+
           ))}
           
 

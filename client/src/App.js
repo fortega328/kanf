@@ -12,7 +12,8 @@ const App = () => {
   const user = JSON.parse(localStorage.getItem('profile'));
   const [questions, setQuestions] = useState([]);
   const [currentIndex, setCurrentIndex]= useState(0);
-
+  const [score, setScore] = useState(0);
+  const [gameEnded, setGameEnded] = useState(false);
   useEffect(()=> {
     fetch(API_URL)
     .then((res) => res.json())
@@ -24,7 +25,16 @@ const App = () => {
     });
   },[])
   const handleAnswer = (answer) => {
+    const newIndex= currentIndex+1;
+    setCurrentIndex(newIndex);
     // check for answer
+    if(answer === questions[currentIndex].
+      correct_answer) {
+        setScore(score +1);
+      }
+      if(newIndex >= questions.length) {
+        setGameEnded(true)
+      }
     // show another question
     // change score if correct
   };
@@ -40,12 +50,14 @@ const App = () => {
           <Route path="/posts/:id" exact component={PostDetails} />
           <Route path="/auth" exact component={() => (!user ? <Auth /> : <Redirect to="/posts" />)} />
         </Switch>
-        <div >
-          <Questionaire data = {questions[0]} handleAnswer={handleAnswer}/>
+        <div > {currentIndex >= questions.length ? (
+          <h1>Your score is {score}</h1>): (
+          <Questionaire data = {questions[currentIndex]} handleAnswer={handleAnswer}/>)}
 
         </div>
       </Container>
-    </BrowserRouter>): (<h1>We are loading your quiz... </h1>)
+    </BrowserRouter>) : (<h1>We are loading your quiz... </h1>) 
+  
   );
 };
 
