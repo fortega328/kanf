@@ -51,7 +51,7 @@ const App = () => {
           <Route path="/auth" exact component={() => (!user ? <Auth /> : <Redirect to="/posts" />)} />
         </Switch>
         <div > {currentIndex >= questions.length ? (
-          <h1>Your score is {score}</h1>): (
+          <h1>Your buff score is {score}</h1>): (
           <Questionaire data = {questions[currentIndex]} handleAnswer={handleAnswer}/>)}
 
         </div>
