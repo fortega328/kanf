@@ -20,4 +20,4 @@ react router dom
 ### Deployed Link
 [FindABuff](https://fortega328-findabuff.zeet.app/posts)
 
-TODO: rename post message, refactor reducers, add some cool memories, maybe clickable tags, fix update functionality
+TODO: rename post message, refactor reducers, only display your buffs, make matches dynamically with test scores, improve styling, add more quizes, populate quiz with random perosnal questions. 
