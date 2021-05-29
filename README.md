@@ -5,7 +5,11 @@
 Setup:
 - run ```npm i && npm start``` for both client and server side to start the app
 
-### Add your interest, take a quiz and find matches.
+### Take a quiz to find people like you!
+Tired of swiping on the apps based on a picture and a couple short phrases? We've got a solution! No more boring dates with FindABuff!
+You will hit the ground running when you meet your buff because you have ALOT in common. 
+Give it a whirl. 
+
 
 ## Technologies Used
 material-ui for styling
