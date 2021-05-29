@@ -10,7 +10,8 @@ const Questionaire = ({handleAnswer, data:{ question, correct_answer, incorrect_
     <h2 dangerouslySetInnerHTML = {{__html:question}}/>
         <div>
           {shuffledAnswers.map((answer)=> (
-            <Button onClick = {handleAnswer(answer)}> {answer} </Button>
+            <Button onClick = {handleAnswer(answer)}> {answer} 
+            </Button>
           ))}
           
 
