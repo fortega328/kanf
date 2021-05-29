@@ -20,4 +20,4 @@ react router dom
 ### Deployed Link
 [FindABuff](https://fortega328-findabuff.zeet.app/posts)
 
-TODO: rename post message, refactor reducers, add some cool memories, maybe clickable tags, fix update functionality
+TODO: add chat, change schema to include gender identity and preference. 
